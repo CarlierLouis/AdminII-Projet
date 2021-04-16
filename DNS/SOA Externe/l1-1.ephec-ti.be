@@ -10,5 +10,5 @@ $ $TTL 604800
             IN      NS      ns.l1-1.ephec-ti.be.
 ns          IN      A       135.125.101.197	
 
-b2b			IN 		A								; Web serveur pour revendeur
-www			IN		A								; Web serveur pour client de tous les jours
+b2b			IN 		A		135.125.101.242			; Web serveur pour revendeur
+www			IN		A		135.125.101.242			; Web serveur pour client de tous les jours
