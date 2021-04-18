@@ -1,0 +1,10 @@
+zone "intranet.l1-1.ephec-ti.be" IN {
+        type master;
+        file "/etc/bind/master/intranet.l1-1.ephec-ti.be";
+};
+
+
+zone "0.16.172.in-addr.arpa" IN {
+        type master;
+        file "/etc/bind/master/0.16.172.in-addr.arpa";
+};
