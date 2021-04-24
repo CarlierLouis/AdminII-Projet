@@ -8,7 +8,7 @@ COPY named.conf /etc/bind/
 COPY named.conf.options /etc/bind/
 COPY named.conf.local /etc/bind/
 
-COPY db.l1-3.ephec-ti.be /etc/bind/zones/
+COPY db.l1-1.ephec-ti.be /etc/bind/zones/
 
 EXPOSE 53/udp
 EXPOSE 53/tcp
