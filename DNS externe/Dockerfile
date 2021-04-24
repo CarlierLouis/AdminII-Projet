@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 #Installation de bind9
-RUN apt update && apt upgrade -y && apt install bind9 bind9utils dnsutils  -y
+RUN apt update && apt upgrade -y && apt install bind9 bind9utils dnsutils net-tools -y
 
 #Copie des fichiers d'installations préparé et configuré
 COPY named.conf /etc/bind/
