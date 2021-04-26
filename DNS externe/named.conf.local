@@ -1,5 +1,0 @@
-//zone du SOA publique
-zone "l1-1.ephec-ti.be" {
-    type master;
-    file "/etc/bind/l1-1.ephec-ti.be";
-};
