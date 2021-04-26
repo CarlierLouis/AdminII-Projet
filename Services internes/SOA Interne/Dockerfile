@@ -1,13 +1,12 @@
 FROM ubuntu:latest
 
 RUN apt update && apt upgrade -y && apt install bind9 bind9utils -y && apt-get update && apt-get install iputils-ping
+RUN apt-get install vim -y
 
 WORKDIR /etc/bind
 
-COPY ./named.conf /etc/bind/named.conf
-COPY ./named.conf.local /etc/bind/named.conf.local
-COPY ./named.conf.options /etc/bind/named.conf.options
-COPY ./master/intranet.l1-1.ephec-ti.be /etc/bind/master/intranet.l1-1.ephec-ti.be
-COPY ./master/0.16.172.in-addr.arpa /etc/bind/master/0.16.172.in-addr.arpa
+COPY named.conf /etc/bind/named.conf
 
-EXPOSE 53
+COPY zones/intranet.l1-1.ephec-ti.be /etc/bind/zones/intranet.l1-1.ephec-ti.be
+COPY zones/0.16.172.in-addr.arpa /etc/bind/zones/0.16.172.in-addr.arpa
+
