@@ -10,7 +10,7 @@ $TTL 604800
 
       IN     NS     ns.intranet.l1-1.ephec-ti.be.
 
-ns          IN      A       172.16.0.1
-resolv      IN      A       172.16.0.2
-erp         IN      A       172.16.0.3
-db          IN      A       172.16.0.4
+ns           IN     A       172.16.0.1
+resolv       IN     A       172.16.0.2
+erp          IN     A       172.16.0.3
+db           IN     A       172.16.0.4
