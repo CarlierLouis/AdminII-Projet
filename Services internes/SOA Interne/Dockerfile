@@ -9,4 +9,4 @@ COPY named.conf /etc/bind/named.conf
 
 COPY ./zones/ /etc/bind/zones/
 
-CMD ["named", "-c", "/etc/bind/named.conf", "-g", "-u", "named"]
+CMD ["named", "-c", "/etc/bind/named.conf", "-g"]
