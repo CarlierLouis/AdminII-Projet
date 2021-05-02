@@ -1,8 +1,8 @@
 CREATE DATABASE wt_db;
 
-CREATE USER 'admin' IDENTIFIED BY 'Password123#@!';
+CREATE USER 'admin' IDENTIFIED BY 'admin';
 
-GRANT ALL PRIVILEGES ON wt_db.* TO 'Password123#@!'; 
+GRANT ALL PRIVILEGES ON wt_db.* TO 'admin!'; 
 
 CREATE TABLE jouets (id INTEGER NOT NULL, nom varchar(40) NOT NULL, prix INTEGER NOT NULL);
 
