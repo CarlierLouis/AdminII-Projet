@@ -5,4 +5,4 @@ RUN apt-get install vim -y
 
 WORKDIR /etc/
 
-COPY /etc/db/ ./db/
+COPY ./db/ /db/
