@@ -1,5 +1,8 @@
 FROM mysql:latest
 
-WORKDIR /etc/bind
+RUN apt update && apt upgrade -y
+RUN apt-get install vim -y
 
-COPY ./db/ /db/
+WORKDIR /etc/
+
+COPY ./db/ /etc/db/
