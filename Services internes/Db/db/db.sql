@@ -1,8 +1,8 @@
 CREATE DATABASE wt_db;
 
-CREATE USER 'admin'@'172.16.1.3' IDENTIFIED BY 'Password123#@!';
+CREATE USER admin IDENTIFIED WITH mysql_native_password BY 'Password123#@!';
 
-GRANT ALL PRIVILEGES ON wt_db.* TO 'admin'@'172.16.1.3'; 
+GRANT ALL PRIVILEGES ON wt_db.* TO 'admin';
 
 CREATE TABLE jouets (id INTEGER NOT NULL AUTO_INCREMENT, nom varchar(40) NOT NULL, prix INTEGER NOT NULL, CONSTRAINT pk_jouets PRIMARY KEY(id));
 
