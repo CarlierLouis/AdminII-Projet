@@ -1,4 +1,7 @@
+# Page html/php du site dynamique de WoodyToys.
+
 <?php
+    # Connexion à la base de données
     $db= mysqli_connect('135.125.101.242:3306','admin','Password123#@!','wt_db') or die('Erreur de connection!');
 ?>
 
@@ -12,23 +15,25 @@
     <h1>Site Web interne WoddyToys</h1>
     
     <?php
-        $query = "SELECT * FROM jouets";
+        $query = "SELECT * FROM jouets";             # Directive sql permettant de séléctionner tous les éléments de la table "jouets".
         mysqli_query($db, $query) or die('erreur');
         $affichage = mysqli_query($db, $query);
         
+	# Boucle permettant l'affichage en "liste" des différents jouets présents dans la base de données.
         while ($row = mysqli_fetch_array($affichage)) {
             echo $row['id'] . ': ' . $row['nom'] . ' ' . $row['prix'] . ' <br />';
         }
         
+	# Condition permettant lors du "submit" du boutton du formulaire html en dessous, d'envoyer les données rentrées dans ce formulaire dans la base de données.
         if (isset($_POST['submit'])) {
      
-        $nom = $_POST["nom"];
-	    $prix = $_POST["prix"]; 
+        $nom = $_POST["nom"];      # Définit les variables en fonction des valeurs rentrées pour nom et prix dans le formulaire avec la méthode POST.
+	$prix = $_POST["prix"]; 
       
-        $sql = "INSERT INTO jouets (nom, prix) VALUES (?,?)";
+        $sql = "INSERT INTO jouets (nom, prix) VALUES (?,?)";     # Directive sql permettant d'insérer un nouvel élément dans la table "jouets" de la base de données.
         $stmt= $db->prepare($sql);
-        $stmt->bind_param("si", $nom, $prix);
-        $stmt->execute();
+        $stmt->bind_param("si", $nom, $prix);                     # Le premier paramètre de "bind_param()" ici "si" permet de spécifier le type de chacune des variables(s = string, i = integer).   
+        $stmt->execute();					  # Exécution de la dirctive sql.
             
         } 
       
@@ -36,6 +41,7 @@
         
     ?>
       
+      # Formulaire html d'ajout de jouets dans la base de données.
       <div style="float:right">
           <a>Ajouter un objets au catalogue</a><br><br>
           <form method="POST">  
