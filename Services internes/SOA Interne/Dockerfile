@@ -7,6 +7,6 @@ WORKDIR /etc/bind
 
 COPY named.conf /etc/bind/named.conf
 
-COPY ./zones/ /etc/bind/zones/
+COPY ./zones/ /etc/bind/master/
 
 CMD ["named", "-c", "/etc/bind/named.conf", "-g"]
