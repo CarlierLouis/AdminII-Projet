@@ -5,4 +5,3 @@ Dans le cadre de notre cours de 2ème années à l'EPHEC en Technologies de l'In
 Membre du groupe de réalisation du projet informatique :<br>
 Louis Carlier <a href="https://github.com/CarlierLouis">@CarlierLouis</a> <br>
 Nicolas Martou <a href="https://github.com/nmartou">@nmartou</a> <br>
-Lucas Silva <a href="https://github.com/creativezigzz">@creativezigzz</a> <br>
